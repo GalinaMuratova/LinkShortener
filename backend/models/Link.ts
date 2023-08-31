@@ -6,7 +6,8 @@ const LinkSchema = new Schema( {
     originalUrl : {
         type: String,
         required: true
-    }
+    },
+    shortUrl: String
 });
 
 const Link = mongoose.model('Links', LinkSchema);
