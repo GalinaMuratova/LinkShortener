@@ -22,28 +22,32 @@ const FormLink: React.FC = () => {
     };
 
     return (
-        <div>
-            <form onSubmit={toShortClick}>
-                <input
-                    type='text'
-                    name='text'
-                    id='text'
-                    placeholder='Enter URL'
-                    value={originalUrl}
-                    required
-                    onChange={onChange}
-                />
-                <button type='submit'>Shorten</button>
-            </form>
-            {shortUrl && (
-                <div>
-                    <h4>Short URL:</h4>
-                    <a href={`http://localhost:8000/${shortUrl}`} >
-                        http://localhost:8000/{shortUrl}
-                    </a>
-                </div>
-            )}
-        </div>
+        <main className='main'>
+            <h1>Shorten your link</h1>
+            <div className="container">
+                <form onSubmit={toShortClick} className='form'>
+                    <input
+                        className='input'
+                        type='text'
+                        name='text'
+                        id='text'
+                        placeholder='Enter URL'
+                        value={originalUrl}
+                        required
+                        onChange={onChange}
+                    />
+                    <button type='submit' className="btn">Shorten</button>
+                </form>
+                {shortUrl && (
+                    <div className="result">
+                        <h3>Short URL:</h3>
+                        <a className='short-link' href={`http://localhost:8000/${shortUrl}`}>
+                            http://localhost:8000/{shortUrl}
+                        </a>
+                    </div>
+                )}
+            </div>
+        </main>
     );
 };
 

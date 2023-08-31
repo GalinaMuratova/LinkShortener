@@ -5,11 +5,12 @@ import FormLink from "./features/FormLink/FormLink";
 const App = () => {
   return (
    <>
-     <header></header>
-     <main>
-       <h1>Add your url</h1>
+     <header>
+        <h2 className='main-title'>link shortener</h2>
+     </header>
+     <div>
        <FormLink />
-     </main>
+     </div>
    </>
   );
 }
